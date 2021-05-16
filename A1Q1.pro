@@ -12,17 +12,15 @@ SOURCES += \
     book.cpp \
     bookinput.cpp \
     bookwriter.cpp \
-    main.cpp \
-    mainwindow.cpp
+    main.cpp
 
 HEADERS += \
     book.h \
     bookinput.h \
-    bookwriter.h \
-    mainwindow.h
+    bookwriter.h
 
 FORMS += \
-    mainwindow.ui
+    bookinput.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

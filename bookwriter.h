@@ -2,16 +2,15 @@
 #define BOOKWRITER_H
 
 #include "book.h"
-#include <QFile>
 
 class BookWriter {
 public:
     BookWriter();
-    BookWriter(QString f);
-    void saveBook(Book &b);
+    BookWriter(QString fn);
+    bool saveBook(Book &b);
 
 private:
-    QString path;
+    QString fileName;
 };
 
 #endif // BOOKWRITER_H

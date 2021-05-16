@@ -7,21 +7,20 @@
 class Book
 {
 public:
-    Book();
-    Book(QString t, QStringList a, QString i, QDate p);
+    Book(); //default constructor
+    Book(QString t, QStringList a, QString i, QDate p); //parameterized constructor
 
-    void setTitle(QString t);
-    void setAuthors(QStringList a);
-    void setIsbn(QString i);
-    void setPublicationDate(QDate p);
+    void setTitle(QString t);   //title setter
+    void setAuthors(QStringList a); //authors setter
+    void setIsbn(QString i);    //ISBN setter
+    void setPublicationDate(QDate p);   //publication date setter
 
-    QString getTitle() const;
-    QStringList getAuthors() const;
-    QString getIsbn() const;
-    QDate getPublicationDate() const;
+    QString getTitle() const;   //title getter
+    QStringList getAuthors() const; //authors getter
+    QString getIsbn() const;    //ISBN getter
+    QDate getPublicationDate() const;   //publication date getter
 
     void obtainBookInfo();
-    QString toString();
 
 private:
     QString title;

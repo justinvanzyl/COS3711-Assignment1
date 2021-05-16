@@ -2,12 +2,15 @@
 #define BOOKWRITER_H
 
 #include "book.h"
+#include <QMetaObject>
+#include <QMetaProperty>
 
-class BookWriter {
+class BookWriter
+{
 public:
     BookWriter();
     BookWriter(QString fn);
-    bool saveBook(Book &b);
+    bool saveBook(QObject &b);
 
 private:
     QString fileName;

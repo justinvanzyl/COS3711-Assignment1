@@ -27,19 +27,22 @@ void bookInput::on_buttonBox_accepted()
         QMessageBox msgConfirm;
         msgConfirm.setText("Are you sure you want to save this book?");
         msgConfirm.setInformativeText("Click 'Show Details...' to view book information");
-        msgConfirm.setDetailedText("\nTitle: " + inTitle +
-                                   "\nAuthor(s): " + inAuthors.join(", ") +
-                                   "\nISBN: " + inIsbn +
-                                   "\nDate Published: " + inPubDate.toString(Qt::ISODate));
+        msgConfirm.setDetailedText(QString("\nTitle: %1\nAuthor(s): %2\nISBN: %3\nDate Published: %4")
+                                   .arg(inTitle,inAuthors.join(", "),inIsbn,inPubDate.toString(Qt::ISODate)));
         msgConfirm.setStandardButtons(QMessageBox::Save|QMessageBox::Discard);
         msgConfirm.setDefaultButton(QMessageBox::Save);
 
         if(msgConfirm.exec() == QMessageBox::Save) {
-            Book inBook(inTitle, inAuthors, inIsbn, inPubDate);
-            BookWriter writer(inTitle + ".txt");
+            Book inBook;
+            inBook.setProperty("title",inTitle);
+            inBook.setProperty("authors",inAuthors);
+            inBook.setProperty("isbn",inIsbn);
+            inBook.setProperty("publicationDate",inPubDate);
+
+            BookWriter writer(inBook.property("title").toString() + ".txt");
             if (writer.saveBook(inBook))
                 QMessageBox::information(0,"File Saved",
-                                         "Book has been saved successfully as " + inTitle + ".txt");
+                                         "Book has been saved as " + inTitle + ".txt");
             else
                 QMessageBox::critical(0,"Error","Book could not be saved");
         }

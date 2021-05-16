@@ -1,11 +1,20 @@
 #ifndef BOOK_H
 #define BOOK_H
 
+#include <QObject>
 #include <QString>
 #include <QDate>
 
-class Book
+class Book : public QObject
 {
+    Q_OBJECT
+
+    Q_PROPERTY(QString title READ getTitle WRITE setTitle)
+    Q_PROPERTY(QStringList authors READ getAuthors WRITE setAuthors)
+    Q_PROPERTY(QString isbn READ getIsbn WRITE setIsbn)
+    Q_PROPERTY(QDate publicationDate READ getPublicationDate WRITE setPublicationDate)
+
+
 public:
     Book(); //default constructor
     Book(QString t, QStringList a, QString i, QDate p); //parameterized constructor

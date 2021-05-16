@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.15.0, 2021-05-15T09:33:46. -->
+<!-- Written by QtCreator 4.15.0, 2021-05-16T10:03:35. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -299,6 +299,7 @@
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory">/Users/justin/Study/UNISA/Year 4/COS3711 Advanced Programming (1)/Assignments/Assignment 1/Code/build-A1Q1-Desktop_Qt_5_15_2_clang_64bit-Debug</value>
     <value type="QString" key="RunConfiguration.WorkingDirectory.default">/Users/justin/Study/UNISA/Year 4/COS3711 Advanced Programming (1)/Assignments/Assignment 1/Code/build-A1Q1-Desktop_Qt_5_15_2_clang_64bit-Debug/A1Q1.app/Contents/MacOS</value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>

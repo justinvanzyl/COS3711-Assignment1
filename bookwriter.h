@@ -8,12 +8,11 @@
 class BookWriter
 {
 public:
-    BookWriter();
-    BookWriter(QString fn);
-    bool saveBook(QObject &b);
+    BookWriter(Book *b);
+    bool saveBook(QString fn);
 
 private:
-    QString fileName;
+    Book *book;
 };
 
 #endif // BOOKWRITER_H
